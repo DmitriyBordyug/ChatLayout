@@ -29,4 +29,8 @@ public struct ChatLayoutSettings: Equatable {
     /// Additional insets for the `CollectionViewChatLayout` content.
     public var additionalInsets: UIEdgeInsets = .zero
 
+    /// The minimum height reported by `collectionViewContentSize`.
+    /// If the calculated content height is smaller than this value,
+    /// the layout returns this height instead.
+    public var minimumContentHeight: CGFloat = 0
 }

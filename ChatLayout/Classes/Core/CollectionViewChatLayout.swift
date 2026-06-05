@@ -132,7 +132,11 @@ public final class CollectionViewChatLayout: UICollectionViewLayout {
             }
             contentSize = size
         }
-        return contentSize
+
+        return CGSize(
+            width: contentSize.width,
+            height: max(contentSize.height, settings.minimumContentHeight)
+        )
     }
 
     /// There is an issue in IOS 15.1 that proposed content offset is being ignored by the UICollectionView when user is scrolling.
